@@ -9,9 +9,9 @@
 			<xsl:value-of select="translate(ФИОФЛ/@Отчество, '&#09;', '')"/><xsl:text>&#09;</xsl:text>
 			<xsl:value-of select="@ДатаРожд"/><xsl:text>&#09;</xsl:text>
 			<xsl:value-of select="@Пол"/><xsl:text>&#09;</xsl:text>
-			<xsl:value-of select="@Гражд"/><xsl:text>&#09;</xsl:text>
-			<xsl:value-of select="УдЛичнФЛ/@КодВидДок"/><xsl:text>&#09;</xsl:text>
-			<xsl:value-of select="УдЛичнФЛ/@СерНомДок"/>
+			<xsl:value-of select="translate(@Гражд, '&#09;', '')"/><xsl:text>&#09;</xsl:text>
+			<xsl:value-of select="translate(УдЛичнФЛ/@КодВидДок, '&#09;', '')"/><xsl:text>&#09;</xsl:text>
+			<xsl:value-of select="translate(УдЛичнФЛ/@СерНомДок, '&#09;', '')"/>
 			<xsl:text>&#13;</xsl:text>
 		</xsl:for-each>
 	</xsl:template>
