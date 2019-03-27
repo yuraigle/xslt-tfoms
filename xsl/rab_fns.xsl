@@ -1,7 +1,10 @@
+<!--
+	На входе - файл работающих от ФНС
+	На выходе - CSV для импорта
+-->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:output method="text" />
 	<xsl:template match="/">
-		<xsl:variable name="file_id" select="Файл/@ИдФайл"/> 
 		<xsl:for-each select="Файл/Документ/СвЗастрахЛиц">
 			<xsl:value-of select="translate(@СНИЛС, ' -', '')"/><xsl:text>&#09;</xsl:text>
 			<xsl:value-of select="translate(ФИОФЛ/@Фамилия, '&#09;', '')"/><xsl:text>&#09;</xsl:text>
